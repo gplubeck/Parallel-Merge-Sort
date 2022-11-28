@@ -2,7 +2,7 @@
 Attempt to benchmark Parallel Merge Sorts.  Contains serial merge sort, openmp, and pthread
 
 # Goal
-Create three seperate Merge Sorts and a testing framework to diplay differences in performance accross different CPU, RAM, and memory contrants.
+Create three seperate Merge Sorts and a testing framework to diplay differences in performance accross different CPU, RAM, and memory contraints.
 
 # Steps to Compile and Run
 This repo is designed for ease of use and code repeatablility across each Merge Sort. Follow the below instructions to compile and execute code.
