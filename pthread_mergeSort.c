@@ -4,7 +4,7 @@
  * This code is thei pthread Merge Sort used in the comparision
  * This code expects to take in random numbers seperated by a space from a file in the local directory called rand.txt
  * Must have MAX defined in Makefile
- * Rest of code in this project can be found at: 
+ * Rest of code in this project can be found at: https://github.com/gplubeck/Parallel-Merge-Sort
  * 
 */
 
