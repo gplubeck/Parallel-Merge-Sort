@@ -158,17 +158,17 @@ int main(int argc, char **argv){
     //start timer
     clock_gettime(CLOCK_REALTIME, &start);
 
-    // creating 4 threads
+    // creating threads
     for (int i = 0; i < numThreads; i++) {
         tsk = &tsklist[i];
         pthread_create(&threads[i], NULL, thread_merge_sort, tsk);
     }
 
-    //joining all 4 threads
+    //joining threads
     for (int i = 0; i < numThreads; i++)
         pthread_join(threads[i], NULL);
 
-    // merging the final 4 parts
+    // merging the parts
     struct tsk *tskm = &tsklist[0];
     for (int i = 1; i < numThreads; i++) {
         struct tsk *tsk = &tsklist[i];
@@ -176,7 +176,6 @@ int main(int argc, char **argv){
     }
     clock_gettime(CLOCK_REALTIME, &end);
     getTimeDelta(start, end, &sortTime);
-    //sortTime = ((double) (end-start))/CLOCKS_PER_SEC;
 
     //validate correct sorting
     assert(1==verifySort(a, MAX-1));
